@@ -27,17 +27,10 @@ public:
 			std::string line;
 			std::unordered_map<char, int> hash;
 			while (input[i] != '\n' && (i < input.length())) {
-
-				if (hash.find(input[i]) != hash.end()) {
-					hash[input[i]] += 1;
-					//if (two_times && three_times)
-					//	break;
-				}
-				else
-					hash[input[i]] = 1;
+				hash[input[i]] += 1;
 				i++;
 			}
-			for (auto it = hash.begin() ; it != hash.end() ; it ++) {
+			for (auto it = hash.begin() ; it != hash.end() ; it++) {
 				if (it->second == 3)
 					two_times = true;
 				if (it->second == 2)
