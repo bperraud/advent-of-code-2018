@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <typeinfo>
 #include <vector>
@@ -16,7 +15,7 @@
 
 class Solution {
 public:
-	int solution(std::string input, std::unordered_map<int, int> hash, int sum) {
+	int solution(std::string input, std::unordered_set<int> set, int sum) {
 		int i = 0;
 		while (i < input.length()) {
 			std::string value;
@@ -24,19 +23,19 @@ public:
 				value.append(1, input[i]);
 				i++;
 			}
-			if (hash.find(sum) != hash.end())
+			if (set.count(sum))
 				return sum;
-			hash[sum] = 1;
+			set.insert(sum);
 			sum += atoi(value.c_str());
 			i++;
 		}
-		return solution(input, hash, sum);
+		return solution(input, set, sum);
 	}
 };
 
 int main(int argc , char **argv) {
 	Solution s;
 
-	std::unordered_map<int, int> hash;
-	std::cout << s.solution(argv[1], hash, 0) << std::endl;
+	std::unordered_set<int> set;
+	std::cout << s.solution(argv[1], set, 0) << std::endl;
 }

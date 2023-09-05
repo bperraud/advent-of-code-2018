@@ -14,9 +14,11 @@
 #include <numeric>
 #include <sstream>
 
+using namespace std;
+
 class Solution {
 public:
-	int solution(std::string input) {
+	int solution(string input) {
 		int i = 0;
 		bool two_times = false;
 		bool three_times = false;
@@ -24,8 +26,8 @@ public:
 		int nb_threes = 0;
 		int value;
 		while (i < input.length()) {
-			std::string line;
-			std::unordered_map<char, int> hash;
+			string line;
+			unordered_map<char, int> hash;
 			while (input[i] != '\n' && (i < input.length())) {
 				hash[input[i]] += 1;
 				i++;
@@ -51,5 +53,5 @@ public:
 int main(int argc , char **argv) {
 	Solution s;
 
-	std::cout << s.solution(argv[1]) << std::endl;
+	cout << s.solution(argv[1]) << endl;
 }
