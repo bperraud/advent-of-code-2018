@@ -35,7 +35,7 @@ public:
 		vector<string> v;
 		for (string line; getline(input, line);)
 			v.push_back(line);
-		for (int i=0 ; i < v.size() ; i++) {
+		for (int i = 0 ; i < v.size() ; i++) {
 			for (int j= i + 1 ; j < v.size() ; j ++) {
 				if ( one_char_diff(v[i], v[j]) == 1) {
 					string res;
