@@ -51,6 +51,11 @@
 		"cstring": "cpp",
 		"bitset": "cpp",
 		"ctime": "cpp",
-		"regex": "cpp"
+		"regex": "cpp",
+		"forward_list": "cpp",
+		"list": "cpp",
+		"ranges": "cpp",
+		"span": "cpp",
+		"valarray": "cpp"
 	}
 }
