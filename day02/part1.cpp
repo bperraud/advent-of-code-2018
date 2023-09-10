@@ -32,10 +32,10 @@ public:
 				hash[input[i]] += 1;
 				i++;
 			}
-			for (auto it = hash.begin() ; it != hash.end() ; it++) {
-				if (it->second == 3)
+			for (const auto& [first, second] : hash) {
+				if (second == 3)
 					two_times = true;
-				if (it->second == 2)
+				if (second == 2)
 					three_times = true;
 			}
 			if (two_times)
