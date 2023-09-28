@@ -40,7 +40,7 @@ public:
 				if ( one_char_diff(v[i], v[j]) == 1) {
 					string res;
 					int k = 0;
-					while (v[i][k] == v[j][k])k++;
+					while (v[i][k] == v[j][k]) k++;
 					return v[i].erase(k, 1);
 				}
 			}

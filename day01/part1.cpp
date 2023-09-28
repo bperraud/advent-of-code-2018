@@ -15,7 +15,7 @@
 #include <sstream>
 
 int main() {
-    int res( 0 );
+    int res(0);
 	int n = 0;
 	while (std::cin >> n)
 	{
